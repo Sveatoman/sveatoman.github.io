@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SDN — Умные дома премиум-класса</title>
+  <meta name="description" content="СДН — проектирование и внедрение комплексных систем «умный дом» для квартир, домов и резиденций. Свет, климат, безопасность и мультирум в единой экосистеме.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070708'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' fill='%23d4af37' text-anchor='middle'%3E%D0%A1%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="loading">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo" aria-hidden="true"><span>S</span><span>D</span><span>N</span></div>
+      <div class="preloader-bar"><i></i></div>
+      <div class="preloader-caption">Умные дома премиум-класса</div>
+    </div>
+  </div>
+
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#hero" class="logo" aria-label="SDN — на главную">
+        <span class="logo-mark">SDN</span>
+        <span class="logo-sub">умные дома</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#about" class="nav-link">О компании</a>
+        <a href="#solutions" class="nav-link">Решения</a>
+        <a href="#process" class="nav-link">Процесс</a>
+        <a href="#projects" class="nav-link">Проекты</a>
+        <a href="#reviews" class="nav-link">Отзывы</a>
+        <a href="#contact" class="nav-link">Контакты</a>
+      </nav>
+      <a href="#contact" class="btn btn-gold nav-cta">Оставить заявку</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav" aria-label="Мобильная навигация">
+      <a href="#about" class="mobile-link">О компании</a>
+      <a href="#solutions" class="mobile-link">Решения</a>
+      <a href="#process" class="mobile-link">Процесс</a>
+      <a href="#projects" class="mobile-link">Проекты</a>
+      <a href="#reviews" class="mobile-link">Отзывы</a>
+      <a href="#contact" class="mobile-link">Контакты</a>
+    </nav>
+    <a href="#contact" class="btn btn-gold mobile-cta">Оставить заявку</a>
+    <div class="mobile-phone">
+      <span>Свяжитесь с нами</span>
+      <a href="tel:+74951234567">+7 (967) 018 5129</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge reveal-h">
+            <span class="badge-dot"></span>
+            Системы «умный дом» премиум-класса
+          </div>
+          <h1 class="hero-title reveal-h">
+            Умный дом<br>
+            <span class="shimmer">нового поколения</span>
+          </h1>
+          <p class="hero-lead reveal-h">
+            SDN проектирует и внедряет комплексные системы автоматизации
+            для квартир, домов и резиденций — свет, климат, безопасность
+            и мультирум в единой экосистеме.
+          </p>
+          <div class="hero-actions reveal-h">
+            <a href="#contact" class="btn btn-gold" data-magnetic>Обсудить проект</a>
+            <a href="#solutions" class="btn btn-ghost" data-magnetic>Наши решения</a>
+          </div>
+          <div class="hero-stats reveal-h">
+            <div class="stat">
+              <div class="stat-value">12</div>
+              <div class="stat-label">лет инженерной практики</div>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat">
+              <div class="stat-value">350+</div>
+              <div class="stat-label">реализованных проектов</div>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat">
+              <div class="stat-value">98%</div>
+              <div class="stat-label">клиентов рекомендуют нас</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-art reveal-h" aria-hidden="true">
+          <div class="halo"></div>
+          <svg class="house-svg" viewBox="0 0 640 560" fill="none">
+            <!-- ground -->
+            <path class="draw d1" pathLength="1" d="M30 522 L610 522" stroke="rgba(212,175,55,.35)" stroke-width="1.4"/>
+            <!-- main volume -->
+            <path class="draw d2" pathLength="1" d="M110 522 L110 300 L430 300 L430 522" stroke="rgba(212,175,55,.85)" stroke-width="2"/>
+            <!-- upper volume -->
+            <path class="draw d3" pathLength="1" d="M110 300 L110 190 L330 190 L330 300" stroke="rgba(212,175,55,.85)" stroke-width="2"/>
+            <!-- roof accents -->
+            <path class="draw d4" pathLength="1" d="M88 300 L452 300" stroke="rgba(212,175,55,.5)" stroke-width="1.4"/>
+            <path class="draw d4" pathLength="1" d="M88 190 L352 190" stroke="rgba(212,175,55,.5)" stroke-width="1.4"/>
+            <!-- door -->
+            <path class="draw d5" pathLength="1" d="M230 522 L230 432 L290 432 L290 522" stroke="rgba(212,175,55,.65)" stroke-width="1.4"/>
+            <circle class="node n3" cx="281" cy="478" r="3.5" fill="#d4af37"/>
+            <!-- windows upper -->
+            <rect class="draw d5" pathLength="1" x="142" y="216" width="72" height="54" rx="3" stroke="rgba(212,175,55,.6)" stroke-width="1.4"/>
+            <rect class="draw d5" pathLength="1" x="242" y="216" width="72" height="54" rx="3" stroke="rgba(212,175,55,.6)" stroke-width="1.4"/>
+            <!-- windows lower -->
+            <rect class="draw d6" pathLength="1" x="142" y="332" width="82" height="72" rx="3" stroke="rgba(212,175,55,.6)" stroke-width="1.4"/>
+            <rect class="draw d6" pathLength="1" x="342" y="332" width="60" height="72" rx="3" stroke="rgba(212,175,55,.6)" stroke-width="1.4"/>
+            <path class="draw d6" pathLength="1" d="M183 332 L183 404 M342 368 L402 368" stroke="rgba(212,175,55,.4)" stroke-width="1"/>
+            <!-- hub -->
+            <circle class="hub-ring r1" cx="512" cy="252" r="22" stroke="rgba(212,175,55,.55)" stroke-width="1.2"/>
+            <circle class="hub-ring r2" cx="512" cy="252" r="36" stroke="rgba(212,175,55,.3)" stroke-width="1"/>
+            <circle class="hub-core" cx="512" cy="252" r="9" fill="#d4af37"/>
+            <path d="M506 252 L518 252 M512 246 L512 258" stroke="#0b0b0d" stroke-width="1.6"/>
+            <!-- flow lines -->
+            <path class="flow f1" d="M490 252 L430 300" stroke="rgba(212,175,55,.55)" stroke-width="1.2"/>
+            <path class="flow f2" d="M490 240 Q380 160 332 190" stroke="rgba(212,175,55,.45)" stroke-width="1.2"/>
+            <path class="flow f3" d="M502 282 Q420 420 292 470" stroke="rgba(212,175,55,.45)" stroke-width="1.2"/>
+            <!-- nodes -->
+            <circle class="node n1" cx="430" cy="300" r="4.5" fill="#d4af37"/>
+            <circle class="node n2" cx="330" cy="190" r="4.5" fill="#d4af37"/>
+            <circle class="node n4" cx="110" cy="300" r="4" fill="rgba(212,175,55,.8)"/>
+            <circle class="node n5" cx="110" cy="190" r="4" fill="rgba(212,175,55,.8)"/>
+          </svg>
+
+          <div class="float-chip chip-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+            <div><b>Безопасность</b><span>все контуры активны</span></div>
+          </div>
+          <div class="float-chip chip-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.6"><path d="M12 2a5 5 0 0 1 5 5v6a5 5 0 1 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M12 18v4"/></svg>
+            <div><b>Климат · 22°</b><span>комфортный режим</span></div>
+          </div>
+          <div class="float-chip chip-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.6"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.8.7-1 1.5-1 2.5h-6c0-1-.2-1.8-1-2.5A6 6 0 0 1 12 3z"/></svg>
+            <div><b>Свет · 40%</b><span>сценарий «Вечер»</span></div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Прокрутить вниз"><span></span></a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Освещение</span><i>✦</i><span>Климат</span><i>✦</i><span>Безопасность</span><i>✦</i><span>Мультирум</span><i>✦</i><span>Кинотеатр</span><i>✦</i><span>Шторы</span><i>✦</i><span>Энергоменеджмент</span><i>✦</i><span>Контроль доступа</span><i>✦</i>
+        <span>Освещение</span><i>✦</i><span>Климат</span><i>✦</i><span>Безопасность</span><i>✦</i><span>Мультирум</span><i>✦</i><span>Кинотеатр</span><i>✦</i><span>Шторы</span><i>✦</i><span>Энергоменеджмент</span><i>✦</i><span>Контроль доступа</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-art reveal-left" aria-hidden="true">
+          <div class="about-frame">
+            <div class="about-orb"></div>
+            <svg viewBox="0 0 300 300" class="about-svg" fill="none">
+              <circle cx="150" cy="150" r="140" stroke="rgba(212,175,55,.18)" stroke-width="1"/>
+              <circle cx="150" cy="150" r="108" stroke="rgba(212,175,55,.32)" stroke-width="1" stroke-dasharray="3 7"/>
+              <circle cx="150" cy="150" r="76" stroke="rgba(212,175,55,.55)" stroke-width="1"/>
+              <path d="M150 104 L196 150 L150 196 L104 150 Z" stroke="#d4af37" stroke-width="1.6"/>
+              <path d="M150 104 L150 74 M196 150 L226 150 M150 196 L150 226 M104 150 L74 150" stroke="rgba(212,175,55,.7)" stroke-width="1.2"/>
+              <circle cx="150" cy="74" r="4" fill="#d4af37"/>
+              <circle cx="226" cy="150" r="4" fill="#d4af37"/>
+              <circle cx="150" cy="226" r="4" fill="#d4af37"/>
+              <circle cx="74" cy="150" r="4" fill="#d4af37"/>
+              <circle cx="150" cy="150" r="6" fill="#d4af37"/>
+            </svg>
+            <div class="about-badge">
+              <b>12 лет</b>
+              <span>создаём дома,<br>которые думают</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <div class="eyebrow reveal">О компании</div>
+          <h2 class="h2 reveal">Инженерия, эстетика<br>и <span class="gold">доверие</span></h2>
+          <p class="lead reveal">
+            SDN — команда инженеров и проектировщиков, которые превращают
+            обычное жильё в продуманную экосистему. Мы не продаём оборудование —
+            мы создаём дом, который подстраивается под ваш ритм жизни.
+          </p>
+          <ul class="check-list" data-stagger>
+            <li class="reveal">Собственное проектное бюро и штатные инженеры</li>
+            <li class="reveal">Интеграция оборудования более 40 премиальных брендов</li>
+            <li class="reveal">Единый сценарий управления светом, климатом и безопасностью</li>
+            <li class="reveal">Персональная поддержка 24/7 и гарантия до 5 лет</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container stats-band" data-stagger>
+        <div class="stat-box reveal">
+          <div class="stat-num"><span class="counter" data-count="12">0</span></div>
+          <div class="stat-cap">лет на рынке автоматизации</div>
+        </div>
+        <div class="stat-box reveal">
+          <div class="stat-num"><span class="counter" data-count="350" data-suffix="+">0</span></div>
+          <div class="stat-cap">проектов сдано в срок</div>
+        </div>
+        <div class="stat-box reveal">
+          <div class="stat-num"><span class="counter" data-count="40" data-suffix="+">0</span></div>
+          <div class="stat-cap">интегрируемых брендов</div>
+        </div>
+        <div class="stat-box reveal">
+          <div class="stat-num"><span class="counter" data-count="24" data-suffix="/7">0</span></div>
+          <div class="stat-cap">поддержка клиентов</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOLUTIONS ============ -->
+    <section class="section solutions" id="solutions">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow reveal">Решения</div>
+          <h2 class="h2 reveal">Системы, которые меняют <span class="gold">качество жизни</span></h2>
+          <p class="lead reveal">Каждое решение проектируется под ваш объект и сценарии — от отдельной системы до полного комплекса «под ключ».</p>
+        </div>
+
+        <div class="cards-grid" data-stagger>
+          <article class="card reveal" data-tilt>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.8.7-1 1.5-1 2.5h-6c0-1-.2-1.8-1-2.5A6 6 0 0 1 12 3z"/></svg>
+            </div>
+            <h3>Умное освещение</h3>
+            <p>Сценарии света на каждое время суток: от бодрящего утра до расслабляющего вечера. Управление голосом, приложением или настенной панелью.</p>
+            <span class="card-num">01</span>
+          </article>
+
+          <article class="card reveal" data-tilt>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M14 4v10.55A4 4 0 1 0 16 18V6h4V4h-6z"/><path d="M6 4h4M6 7h4M6 10h4" /></svg>
+            </div>
+            <h3>Климат-контроль</h3>
+            <p>Точный микроклимат в каждом помещении: тёплые полы, увлажнение, вентиляция и кондиционирование в единой интеллектуальной системе.</p>
+            <span class="card-num">02</span>
+          </article>
+
+          <article class="card reveal" data-tilt>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><rect x="9.5" y="10.5" width="5" height="4.5" rx="1"/><path d="M10.5 10.5V9.5a1.5 1.5 0 0 1 3 0v1"/></svg>
+            </div>
+            <h3>Безопасность</h3>
+            <p>Умные замки, видеонаблюдение, датчики протечки и дыма. Дом сообщит о любом событии раньше, чем вы его заметите.</p>
+            <span class="card-num">03</span>
+          </article>
+
+
+          <article class="card reveal" data-tilt>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3.5" y="4" width="17" height="16" rx="1.5"/><path d="M3.5 7.5h17M7 4v3.5M12 4v3.5M17 4v3.5"/></svg>
+            </div>
+            <h3>Шторы и жалюзи</h3>
+            <p>Тихие моторизированные карнизы и автоматика по солнцу, времени и сценариям — от утреннего рассвета до глубокого сна.</p>
+            <span class="card-num">05</span>
+          </article>
+
+          <article class="card reveal" data-tilt>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="11" rx="1.5"/><path d="M12 16v3M8.5 21h7M10 8.5l4.5 2L10 12.5z"/></svg>
+            </div>
+            <h3>Домашний кинотеатр</h3>
+            <p>Кинозал студийного уровня: акустика, проекция, затемнение и объёмный звук, настроенные нашими инженерами.</p>
+            <span class="card-num">06</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow reveal">Как мы работаем</div>
+          <h2 class="h2 reveal">От идеи — к <span class="gold">живому дому</span></h2>
+        </div>
+
+        <div class="steps" data-stagger>
+          <div class="step reveal">
+            <div class="step-num">01</div>
+            <h3>Консультация</h3>
+            <p>Изучаем объект. Выезжаем на объект и формируем техническое задание.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">02</div>
+            <h3>Проектирование</h3>
+            <p>Готовим проект: схемы, спецификации, визуализации. Согласуем каждую деталь до начала работ.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">03</div>
+            <h3>Монтаж</h3>
+            <p>Собственные бригады, чистая работа, строгие сроки. Интегрируем оборудование в единую экосистему.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">04</div>
+            <h3>Запуск и забота</h3>
+            <p>Настраиваем сценарии, обучаем управлению. Остаёмся на связи 24/7 в течение всего срока службы системы.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow reveal">Проекты</div>
+          <h2 class="h2 reveal">Дома, в которых <span class="gold">уже живёт будущее</span></h2>
+        </div>
+
+        <div class="projects-grid" data-stagger>
+          <a href="#contact" class="project-card reveal" data-tilt>
+            <div class="project-bg bg-1"></div>
+            <span class="project-index">01</span>
+            <div class="project-body">
+              <span class="project-tag">Загородный дом · 850 м²</span>
+              <h3>Резиденция «Сосновый бор»</h3>
+              <p>Полный комплекс автоматизации: свет, климат, безопасность и мультирум в трёх уровнях.</p>
+              <span class="project-link">Смотреть проект <i>→</i></span>
+            </div>
+          </a>
+          <a href="#contact" class="project-card reveal" data-tilt>
+            <div class="project-bg bg-2"></div>
+            <span class="project-index">02</span>
+            <div class="project-body">
+              <span class="project-tag">Пентхаус · 320 м²</span>
+              <h3>Пентхаус «Небо»</h3>
+              <p>Сценарное освещение и панорамные шторы с бесшумной автоматикой над городом.</p>
+              <span class="project-link">Смотреть проект <i>→</i></span>
+            </div>
+          </a>
+          <a href="#contact" class="project-card reveal" data-tilt>
+            <div class="project-bg bg-3"></div>
+            <span class="project-index">03</span>
+            <div class="project-body">
+              <span class="project-tag">Квартира · 140 м²</span>
+              <h3>Апартаменты «Сити Парк»</h3>
+              <p>Умный климат и энергоменеджмент в жилом комплексе бизнес-класса.</p>
+              <span class="project-link">Смотреть проект <i>→</i></span>
+            </div>
+          </a>
+          <a href="#contact" class="project-card reveal" data-tilt>
+            <div class="project-bg bg-4"></div>
+            <span class="project-index">04</span>
+            <div class="project-body">
+              <span class="project-tag">Вилла · 1 100 м²</span>
+              <h3>Вилла «Лазурная»</h3>
+              <p>Интеграция всех систем с домашним кинотеатром студийного уровня.</p>
+              <span class="project-link">Смотреть проект <i>→</i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow reveal">Отзывы</div>
+          <h2 class="h2 reveal">Что говорят <span class="gold">владельцы</span></h2>
+        </div>
+
+        <div class="reviews-grid" data-stagger>
+          <figure class="review reveal">
+            <div class="quote-mark">“</div>
+            <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <blockquote>SDN полностью автоматизировали нашу квартиру: свет, шторы и климат управляются одной кнопкой. Уровень сервиса — как в лучшем отеле.</blockquote>
+            <figcaption>
+              <div class="review-avatar">АК</div>
+              <div><b>Андрей К.</b><span>владелец пентхауса</span></div>
+            </figcaption>
+          </figure>
+          <figure class="review reveal">
+            <div class="quote-mark">“</div>
+            <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <blockquote>Проект загородного дома реализовали точно в срок. Инженеры продумали каждую мелочь — от сценария ужина до охранного контура.</blockquote>
+            <figcaption>
+              <div class="review-avatar">МС</div>
+              <div><b>Марина и Олег С.</b><span>резиденция в Подмосковье</span></div>
+            </figcaption>
+          </figure>
+          <figure class="review reveal">
+            <div class="quote-mark">“</div>
+            <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <blockquote>Отдельное спасибо за поддержку: любое обращение решают за минуты. Дом действительно живёт своей жизнью — и это правильная жизнь.</blockquote>
+            <figcaption>
+              <div class="review-avatar">ДВ</div>
+              <div><b>Дмитрий В.</b><span>владелец резиденции</span></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <div class="reveal">
+          <h2 class="cta-title">Готовы увидеть, каким может быть <span class="shimmer">ваш дом</span>?</h2>
+          <p class="cta-text">Расскажите о своей мечте — мы воплотим её в технологиях.</p>
+        </div>
+        <a href="#contact" class="btn btn-gold btn-lg reveal" data-magnetic>Обсудить проект</a>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <div class="eyebrow reveal">Контакты</div>
+          <h2 class="h2 reveal">Обсудим <span class="gold">ваш проект?</span></h2>
+          <p class="lead reveal">
+            Оставьте заявку — инженер SDN свяжется с вами в течение 30 минут,
+            ответит на вопросы и предложит решение под ваш объект.
+          </p>
+
+          <ul class="contact-list reveal">
+            <li>
+              <span class="contact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+              <div><span>Телефон</span><a href="tel:+74951234567">+7 (495) 123-45-67</a></div>
+            </li>
+            <li>
+              <span class="contact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+               <div><span>E-mail</span><a href="mailto:sveatoman@gmail.com">sveatoman@gmail.com</a></div>
+            </li>
+            <li>
+              <span class="contact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+              <div><span>Шоурум</span><a href="#contact">Москва, Пресненская наб., 12</a></div>
+            </li>
+            <li>
+              <span class="contact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+              <div><span>Режим работы</span><a href="#contact">Ежедневно с 9:00 до 21:00</a></div>
+            </li>
+          </ul>
+
+          <div class="socials reveal">
+            <a href="#" class="social-chip" data-magnetic>Telegram</a>
+            <a href="#" class="social-chip" data-magnetic>WhatsApp</a>
+            <a href="#" class="social-chip" data-magnetic>VK</a>
+            <a href="#" class="social-chip" data-magnetic>YouTube</a>
+          </div>
+        </div>
+
+        <div class="form-card reveal-right">
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/sveatoman@gmail.com" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Новая заявка с сайта SDN">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_url" value="http://127.0.0.1:5500/index.html">
+            <h3>Оставить заявку</h3>
+            <div class="field">
+              <input type="text" id="fName" name="name" placeholder=" " required autocomplete="name">
+              <label for="fName">Ваше имя *</label>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <input type="tel" id="fPhone" name="phone" placeholder=" " required autocomplete="tel">
+                <label for="fPhone">Телефон *</label>
+              </div>
+              <div class="field">
+                <input type="email" id="fEmail" name="email" placeholder=" " autocomplete="email">
+                <label for="fEmail">E-mail</label>
+              </div>
+            </div>
+            <div class="field select-field">
+              <select id="fTopic" name="topic">
+                <option value="complex" selected>Комплексный «умный дом»</option>
+                <option value="light">Освещение</option>
+                <option value="climate">Климат</option>
+                <option value="security">Безопасность</option>
+                <option value="multitroom">Мультирум и аудио</option>
+                <option value="cinema">Домашний кинотеатр</option>
+                <option value="other">Другое</option>
+              </select>
+              <label for="fTopic">Что вас интересует</label>
+            </div>
+            <div class="field">
+              <textarea id="fMsg" name="message" rows="3" placeholder=" "></textarea>
+              <label for="fMsg">Коротко о вашем объекте</label>
+            </div>
+            <label class="consent">
+              <input type="checkbox" id="fAgree" checked>
+              <span class="box"></span>
+              <span class="consent-text">Соглашаюсь с <a href="#">политикой конфиденциальности</a></span>
+            </label>
+            <button type="submit" class="btn btn-gold btn-block" data-magnetic>
+              <span class="btn-label">Отправить заявку</span>
+            </button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="form-success" id="formSuccess" aria-hidden="true">
+            <svg class="success-check" viewBox="0 0 80 80" fill="none">
+              <circle class="sc-circle" cx="40" cy="40" r="34" stroke="#d4af37" stroke-width="2"/>
+              <path class="sc-tick" d="M26 41 L36 51 L55 31" stroke="#f5d67b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Заявка отправлена</h3>
+            <p>Спасибо за обращение! Инженер SDN свяжется с вами<br>в течение 30 минут.</p>
+            <button class="btn btn-ghost" id="formReset">Отправить ещё одну</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <a href="#hero" class="logo">
+        <span class="logo-mark">SDN</span>
+        <span class="logo-sub">умные дома</span>
+      </a>
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <a href="#about">О компании</a>
+        <a href="#solutions">Решения</a>
+        <a href="#process">Процесс</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="#" aria-label="Telegram">TG</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+        <a href="#" aria-label="VK">VK</a>
+        <a href="#" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 SDN — умные дома премиум-класса. Все права защищены.</span>
+      <a href="#">Политика конфиденциальности</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
